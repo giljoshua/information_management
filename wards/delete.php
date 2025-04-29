@@ -19,9 +19,20 @@ $item = $stmt->fetch();
 if (!$item) die("Ward not found.");
 ?>
 
-<h2>Delete Ward</h2>
-<p>Are you sure you want to delete <strong><?= htmlspecialchars($item['name']) ?></strong>?</p>
-<form method="post">
-    <button type="submit">Yes, Delete</button>
-    <a href="index.php">Cancel</a>
-</form>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete Ward</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <h2>Delete Ward</h2>
+    <p>Are you sure you want to delete <strong><?= htmlspecialchars($item['name']) ?></strong>?</p>
+    <form method="post">
+        <button type="submit">Yes, Delete</button>
+        <a href="index.php">Cancel</a>
+    </form>
+</body>
+</html>
